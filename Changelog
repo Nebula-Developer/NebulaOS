@@ -1,0 +1,10 @@
+v0.0.1:
+    - Added changelog
+    - Created system config class
+    - Added logging system
+    - Added (unstable) GetFrame MethodBase to get the frame of the calling function
+    - Implemented function receiver inside logs (To avoid repetition in func calls)
+    - Bugfix: Renamed certain namespaces to avoid conflicts (NebulaOS.System -> NebulaOS.NSystem)
+    - Note: The main function will be edited later, and should be one of the smallest classes in the project.
+            It will initialize the public variables, and call a startup function.
+    - General cleanup

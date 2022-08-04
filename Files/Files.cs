@@ -3,6 +3,8 @@ using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
 using System;
 
+using NebulaOS.NSystem;
+
 namespace NebulaOS.Files {
     public static class OSFile {
         /// <summary>

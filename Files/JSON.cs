@@ -5,49 +5,21 @@ using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System;
 
-using NebulaOS.System;
+using NebulaOS.NSystem;
 
-namespace NebulaOS.Files.JSON {
+namespace NebulaOS.Files.NJSON {
     public class JSON {
-        #region Logging
-        /// <summary>
-        /// JSON error handler
-        /// </summary>
-        /// <param name="sender">The function that sent the error.</param>
-        /// <param name="error">The error that occured.</param>
-        public static void LogError(String sender, string error) {
-            Logging.Log(sender, error, Logging.LogType.Error);
-        }
-
-        /// <summary>
-        /// JSON info handler
-        /// </summary>
-        /// <param name="sender">The function that sent the info.</param>
-        /// <param name="info">The info that occured.</param>
-        public static void LogInfo(String sender, string info) {
-            Logging.Log(sender, info, Logging.LogType.Info);
-        }
-
-        /// <summary>
-        /// JSON warning handler
-        /// </summary>
-        /// <param name="sender">The function that sent the warning.</param>
-        /// <param name="warning">The warning that occured.</param>
-        public static void LogWarning(String sender, string warning) {
-            Logging.Log(sender, warning, Logging.LogType.Warning);
-        }
-        #endregion
-
         /// <summary>
         /// Parse a file as JSON.
         /// </summary>
         /// <param name="path">The path to the file.</param>
+        /// <returns>The JSON object.</returns>
         public static dynamic? ParseFile(String path) {
             try {
                 String json = File.ReadAllText(path);
                 return JsonConvert.DeserializeObject(json);
             } catch (Exception e) {
-                LogError("NebulaOS.Files.JSON.ParseFile", e.Message);
+                Logging.LogError(e.Message);
                 return null;
             }
         }
@@ -56,14 +28,25 @@ namespace NebulaOS.Files.JSON {
         /// Parse a file as JSON.
         /// </summary>
         /// <param name="path">The path to the file.</param>
+        /// <returns>The JSON object.</returns>
         public static T? ParseFile<T>(String path) where T : class {
             try {
                 String json = File.ReadAllText(path);
                 return JsonConvert.DeserializeObject<T>(json);
             } catch (Exception e) {
-                LogError("NebulaOS.Files.JSON.ParseFile", e.Message);
+                Logging.LogError(e.Message);
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Serialize a dynamic to JSON.
+        /// </summary>
+        /// <param name="json">The dynamic to serialize.</param>
+        /// <param name="indent">Whether to indent the JSON.</param>
+        /// <returns>The serialized JSON.</returns>
+        public static String Serialize(dynamic json, bool indent = true) {
+            return JsonConvert.SerializeObject(json, indent ? Formatting.Indented : Formatting.None);
         }
     }
 }

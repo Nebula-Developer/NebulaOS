@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Diagnostics;
 
 using NebulaOS.Files;
-using NebulaOS.Files.JSON;
-using NebulaOS.System;
+using NebulaOS.Files.NJSON;
+using NebulaOS.NSystem;
 
 namespace NebulaOS {
     public class Root {
         public static int Main(String[] args) {
-            dynamic? json = JSON.ParseFile(Paths.GetRootPath("NebulaOS.deps.json"));
-            if (json != null) {
-                Console.WriteLine(json.runtimeTarget.name);
-            }
+            Console.WriteLine("NebulaOS v0.0.1");
             return 0;
         }
     }
