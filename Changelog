@@ -8,3 +8,6 @@ v0.0.1:
     - Note: The main function will be edited later, and should be one of the smallest classes in the project.
             It will initialize the public variables, and call a startup function.
     - General cleanup
+
+v0.0.2:
+    - Added discord integration
