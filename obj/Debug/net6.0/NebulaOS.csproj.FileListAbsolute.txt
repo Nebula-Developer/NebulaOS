@@ -1,0 +1,17 @@
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\NebulaOS.exe
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\NebulaOS.deps.json
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\NebulaOS.runtimeconfig.json
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\NebulaOS.dll
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\NebulaOS.pdb
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.csproj.AssemblyReference.cache
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.AssemblyInfoInputs.cache
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.AssemblyInfo.cs
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.csproj.CoreCompileInputs.cache
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.dll
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\refint\NebulaOS.dll
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.pdb
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.genruntimeconfig.cache
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\ref\NebulaOS.dll
+C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\nebul\Desktop\NebulaOS\obj\Debug\net6.0\NebulaOS.csproj.CopyComplete
