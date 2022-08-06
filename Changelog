@@ -41,3 +41,19 @@ v0.0.4:
     - Created LogType.System for messages from the system
     - Added JSON JObject undefined checker
     - Updated old summaries
+
+v0.0.5:
+    - Created Storyboards directory (For graphical user interfaces)
+    - Created Graphics directory (For color and print handling)
+    - Added RGB color class
+    - Made safe color handler for RGB
+    - Added RGB escape sequence converter
+    - Added RGB brighten/darken operator
+    - Added gradient graphics test
+    - Created fade method
+    - Created fade in MS method
+    - Added OnFade event
+    - Fixed innacurate percantage calculations for fading
+    - TODO: Create custom terminal for NebulaOS
+    - Bug: Colors do not work on windows command lines (CMD, PS)
+           Please use the VSCode terminal for now. (Will fix later)
