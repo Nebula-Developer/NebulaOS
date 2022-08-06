@@ -42,5 +42,16 @@ namespace NebulaOS.Files {
         public static void Delete(String path) {
             File.Delete(path);
         }
+
+        /// <summary>
+        /// Create a file and write a string to it, only if it doesn't exist.
+        /// </summary>
+        /// <param name="path">The path to the file.</param>
+        /// <param name="content">The content to write.</param>
+        public static void CreateNonExisting(String path, String data = "") {
+            if (!File.Exists(path)) {
+                File.WriteAllText(path, data);
+            }
+        }
     }
 }

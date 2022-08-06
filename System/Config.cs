@@ -15,9 +15,17 @@ using NebulaOS.Files;
 using Required = Newtonsoft.Json.Required;
 
 namespace NebulaOS.NSystem {
+    public class DriveData {
+        public string Data;
+        public DriveData(string data) {
+            Data = data;
+        }
+    }
+
     public class Drive {
         public String Name;
         public DriveType Type;
+        public DriveData data = new DriveData("TestData");
 
         public enum DriveType {
             Root,

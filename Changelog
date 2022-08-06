@@ -32,4 +32,12 @@ v0.0.3:
     - Made boot more efficient
 
 v0.0.4:
+    - Added dependency creation
     - Moved from OSX to win
+    - Put main functions inside System/Deps.cs
+    - Remade boot sequence
+    - Added dependency loading
+    - Added logs during boot
+    - Created LogType.System for messages from the system
+    - Added JSON JObject undefined checker
+    - Updated old summaries

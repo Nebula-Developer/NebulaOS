@@ -1,2 +1,0 @@
-/Users/nicocook/Desktop/NebulaOS/NebulaOS/Build/Windows/NebulaOS.pdb
-/Users/nicocook/Desktop/NebulaOS/NebulaOS/Build/Windows/NebulaOS.exe

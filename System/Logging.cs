@@ -13,7 +13,8 @@ namespace NebulaOS.NSystem {
             Warning, // Warning - Should fix
             Error, // Error - Just below fatal
             Fatal, // Fatal - System is about to crash (Serious)
-            Debug // Debug - From system development
+            Debug, // Debug - From system development
+            System // System - Messages from the system
         }
 
         /// <summary>
@@ -21,7 +22,6 @@ namespace NebulaOS.NSystem {
         /// </summary>
         /// <param name="sender">The message to log.</param>
         /// <param name="message">The message to log.</param>
-        /// <param name="area">The area of the system the message is from.</param>
         /// <param name="type">The info/error level of the message.</param>
         public static string Log(String sender, String message, LogType type) {
             String log = String.Format("[{0}] ({1}) {2}: {3}", sender, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), type, message);
@@ -40,30 +40,35 @@ namespace NebulaOS.NSystem {
         }
 
         /// <summary>
-        /// JSON error handler
+        /// Logging error handler
         /// </summary>
-        /// <param name="sender">The function that sent the error.</param>
         /// <param name="error">The error that occured.</param>
         public static String LogError(string error) {
             return Log(GetFunctionName(2), error, LogType.Error);
         }
 
         /// <summary>
-        /// JSON info handler
+        /// Logging info handler
         /// </summary>
-        /// <param name="sender">The function that sent the info.</param>
         /// <param name="info">The info that occured.</param>
         public static String LogInfo(string info) {
             return Log(GetFunctionName(2), info, Logging.LogType.Info);
         }
 
         /// <summary>
-        /// JSON warning handler
+        /// Logging warning handler
         /// </summary>
-        /// <param name="sender">The function that sent the warning.</param>
         /// <param name="warning">The warning that occured.</param>
         public static String LogWarning(string warning) {
             return Log(GetFunctionName(2), warning, Logging.LogType.Warning);
+        }
+
+        /// <summary>
+        /// Logging system handler
+        /// </summary>
+        /// <param name="system">The system message that occured.</param>
+        public static String LogSystem(string system) {
+            return Log(GetFunctionName(2), system, Logging.LogType.System);
         }
     }
 }
