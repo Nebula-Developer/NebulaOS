@@ -1,18 +1,10 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "dRRzzlvDFl0xDuDsgcFBvRhapBryewiRQH26155+SnuoIc4W1wgePFE0fz+i43iBjeQSqQovQsbAPMHACNyEVA==",
-=======
-  "dgSpecHash": "e4gZkaHoOIf6PLjXAnIQQklrCavMkbKbZ4N90f+dDQMxTh6F3othsdZVnnjVUEBbkcE8Jzriq3Nvf7hnD19f1w==",
->>>>>>> effee0a37310958a15f978d256dfc89ac4772173
   "success": true,
-  "projectFilePath": "/Users/nicocook/Desktop/NebulaOS/NebulaOS/NebulaOS.csproj",
+  "projectFilePath": "C:\\Users\\nebul\\Desktop\\NebulaOS\\NebulaOS.csproj",
   "expectedPackageFiles": [
-<<<<<<< HEAD
     "C:\\Users\\nebul\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
-=======
-    "/Users/nicocook/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
->>>>>>> effee0a37310958a15f978d256dfc89ac4772173
   ],
   "logs": []
 }
