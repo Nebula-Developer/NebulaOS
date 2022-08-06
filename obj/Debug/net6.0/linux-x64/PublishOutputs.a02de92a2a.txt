@@ -1,2 +1,0 @@
-C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\linux-x64\publish\NebulaOS.pdb
-C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\linux-x64\publish\NebulaOS

@@ -1,4 +1,4 @@
-.PHONY: run build
+.PHONY: run build clean
 
 run:
 	dotnet run
@@ -12,3 +12,10 @@ build:
 	dotnet publish -r linux-x64 -p:PublishSingleFile=true --self-contained false -o Build/Linux/
 	dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained false -o Build/Windows/
 	dotnet publish -r osx-x64 -p:PublishSingleFile=true --self-contained false -o Build/MacOS/
+
+clean:
+	-rmdir obj /s /q
+	-rmdir bin /s /q
+
+	-rm -rf bin
+	-rm -rf obj

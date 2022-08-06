@@ -11,3 +11,25 @@ v0.0.1:
 
 v0.0.2:
     - Added discord integration
+    - Added casted file reading (For config loading and saving)
+    - TODO: Add field checker to avoid unset values
+    - Replaced field checker with required fields.
+      This will return NULL, and will not crash the program - although will not supply the missing field.
+    - Added missing summaries (Almost all classes)
+    - Started work on boot
+    - Checked config for unknown values (Will improve later)
+    - Added warning for unknown values
+
+v0.0.3:
+    - Updated boot to use new classes
+    - Compacted boot code
+    - Removed boot logs
+    - Started work on JSON undefined checker (For catching / logging)
+    - Added undefined field/property error logging
+    - Implemented JSON undefined checker
+    - Bugfix: Fixed array children looping in the undefined and unknown checker
+    - General cleanup
+    - Made boot more efficient
+
+v0.0.4:
+    - Moved from OSX to win

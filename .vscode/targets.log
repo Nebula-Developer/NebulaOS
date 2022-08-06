@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 04 19:34:15 2022
+# Make data base, printed on Sat Aug 06 12:39:48 2022
 
 # Variables
 
@@ -37,7 +37,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10228_MKFUGBJKKSXLZOFT
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9652_CLGJIUQTKUUCMDVO
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 10228
+VSCODE_PID = 9652
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -148,7 +148,8 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 USERDOMAIN = DESKTOP-IFOT2SN
-# 'override' directive
+# 'override' directive 
+
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
@@ -173,7 +174,8 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/ 
+workbench/api/node/extensionHostProcess
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
@@ -207,7 +209,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659598143): 13 files, no impossibilities.
+# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659746267): 13 files, no impossibilities.
 
 # 13 files, no impossibilities in 1 directories.
 
@@ -220,9 +222,20 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-04 19:33:43
+#  Last modified 2022-08-06 12:37:47
 #  File has been updated.
 #  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 17):
+	-rmdir obj /s /q
+	-rmdir bin /s /q
+	-rm -rf bin
+	-rm -rf obj
 
 # Not a target:
 .DEFAULT:
@@ -259,25 +272,25 @@ build:
 	dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained false -o Build/Windows/
 	dotnet publish -r osx-x64 -p:PublishSingleFile=true --self-contained false -o Build/MacOS/
 
-.PHONY: run build
+.PHONY: run build clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/21=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/24=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 124 B / avg = 6 B
-# current buf: size = 8174 B / used = 124 B / count = 19 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 137 B / avg = 6 B
+# current buf: size = 8174 B / used = 137 B / count = 20 / avg = 6 B
 
-# strcache performance: lookups = 28 / hit rate = 32%
+# strcache performance: lookups = 31 / hit rate = 35%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Thu Aug 04 19:34:15 2022
+# Load=20/8192=0%, Rehash=0, Collisions=0/31=0%
+# Finished Make data base on Sat Aug 06 12:39:48 2022
 
  

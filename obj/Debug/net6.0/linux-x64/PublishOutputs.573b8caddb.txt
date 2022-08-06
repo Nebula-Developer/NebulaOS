@@ -1,0 +1,2 @@
+/Users/nicocook/Desktop/NebulaOS/NebulaOS/Build/Linux/NebulaOS.pdb
+/Users/nicocook/Desktop/NebulaOS/NebulaOS/Build/Linux/NebulaOS

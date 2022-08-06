@@ -1,18 +1,15 @@
 {
   "Drives": [
     {
-      "Name": "Programs",
-      "Type": 1
-    },
-    {
-      "Name": "OS",
-      "Type": 0
-    },
-    {
-      "Name": "Debug",
-      "Type": 2
+      "test": [
+        { 
+          "a": "a",
+          "b": "b"
+        }
+      ]
     }
   ],
-  "DefaultDrive": "Debugd",
-  "DrivePath": "Undefined"
+  "DefaultDrive": "OS",
+  "test": "hello",
+  "a": true
 }
