@@ -57,3 +57,7 @@ v0.0.5:
     - TODO: Create custom terminal for NebulaOS
     - Bug: Colors do not work on windows command lines (CMD, PS)
            Please use the VSCode terminal for now. (Will fix later)
+
+v0.0.6:
+    - Started work on custom terminal
+    - Initialized electron project in /Terminal/

@@ -26,13 +26,13 @@ namespace NebulaOS {
                 percent += 2.5f;
 
                 
-                Console.Write(rgbColor.FadeTo(new RGB(0, 255, 0), percent).ToBGStr() + new String(' ', Console.BufferWidth - 1) + RGB.Reset());
+                Console.Write(rgbColor.FadeTo(new RGB(155, 0, 0), percent).ToBGStr() + new String(' ', Console.BufferWidth - 1) + RGB.Reset());
 
                 if (i == Console.BufferHeight / 2) {
-                    String welcomeStr = "Welcome to NebulaOS. Please note that this is still in development.";
+                    String welcomeStr = "Test";
                     if (Console.BufferWidth > welcomeStr.Length) {
                         Console.SetCursorPosition((Console.BufferWidth / 2) - (welcomeStr.Length / 2), Console.BufferHeight / 2);
-                        Console.Write(rgbColor.FadeTo(new RGB(0, 255, 0), percent).ToBGStr() + welcomeStr + RGB.Reset());
+                        Console.Write(rgbColor.FadeTo(new RGB(255, 0, 0), percent).ToBGStr() + welcomeStr + RGB.Reset());
                     }
                 }
             }

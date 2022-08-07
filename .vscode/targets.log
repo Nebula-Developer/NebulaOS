@@ -7,8 +7,9 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sat Aug 06 12:39:48 2022
+# Make data base, printed on Sun Aug 07 12:29:35 2022
 
 # Variables
 
@@ -37,7 +38,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9652_CLGJIUQTKUUCMDVO
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15056_JBJEKZNVKKHIJSGY
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -51,7 +52,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\nebul\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = C:\Users\nebul\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
 # environment
 LANG = C
 # default
@@ -69,7 +70,7 @@ ONEDRIVE = C:\Users\nebul\OneDrive
 # makefile
 CURDIR := c:/Users/nebul/Desktop/NebulaOS
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -87,7 +88,8 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9652
+VSCODE 
+_PID = 15056
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -148,11 +150,12 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 USERDOMAIN = DESKTOP-IFOT2SN
-# 'override' directive 
-
+# 'override' directive
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := run
 # default
@@ -174,8 +177,7 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/ 
-workbench/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
@@ -183,7 +185,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\nebul\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\a3cc19a553ed2ccf0bda860b303fbb3a-1.69.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\a3cc19a553ed2ccf0bda860b303fbb3a-1.70.0-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -193,7 +195,8 @@ SUFFIXES :=
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-SESSIONNAME = Console
+SESSIONNAME =  
+Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -201,7 +204,7 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=93/1024=9%, Rehash=0, Collisions=9/120=8%
+# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
 # Pattern-specific Variable Values
 
@@ -209,9 +212,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659746267): 13 files, no impossibilities.
+# . (key c:/Users/ 
+nebul/Desktop/NebulaOS, mtime 1659760186): 17 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -222,7 +226,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-06 12:37:47
+#  Last modified 2022-08-06 14:07:25
 #  File has been updated.
 #  Successfully updated.
 
@@ -285,12 +289,12 @@ build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 20 / storage = 137 B / avg = 6 B
-# current buf: size = 8174 B / used = 137 B / count = 20 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 177 B / avg = 7 B
+# current buf: size = 8174 B / used = 177 B / count = 24 / avg = 7 B
 
-# strcache performance: lookups = 31 / hit rate = 35%
+# strcache performance: lookups = 35 / hit rate = 31%
 # hash-table stats:
-# Load=20/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Sat Aug 06 12:39:48 2022
+# Load=24/8192=0%, Rehash=0, Collisions=0/35=0%
+# Finished Make data base on Sun Aug 07 12:29:35 2022
 
  
