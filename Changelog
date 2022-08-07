@@ -59,5 +59,10 @@ v0.0.5:
            Please use the VSCode terminal for now. (Will fix later)
 
 v0.0.6:
-    - Started work on custom terminal
-    - Initialized electron project in /Terminal/
+    - Cloned Windows Terminal and modified settings to fit NebulaOS
+    - Removed terminal title bar
+    - Fixed color issues
+    - Note: When running NebulaOS, please now use the Windows Terminal.
+            I recommend using F11. Feel free to modify the setting.
+    - Added gradient function
+    - Fixed calculations for gradient

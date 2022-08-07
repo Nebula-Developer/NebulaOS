@@ -7,14 +7,11 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sun Aug 07 12:29:35 2022
+# Make data base, printed on Sun Aug 07 18:03:37 2022
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -38,9 +35,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15056_JBJEKZNVKKHIJSGY
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17320_GVEXVNKSTILZAJCN
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -70,7 +65,7 @@ ONEDRIVE = C:\Users\nebul\OneDrive
 # makefile
 CURDIR := c:/Users/nebul/Desktop/NebulaOS
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -88,8 +83,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE 
-_PID = 15056
+VSCODE_PID = 17320
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -121,7 +115,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Propellerhead Software\ReWire\;C:\Program Files\Common Files\Propellerhead Software\ReWire\;C:\Users\nebul\AppData\Local\Microsoft\WindowsApps;C:\Users\nebul\.dotnet\tools;C:\Users\nebul\AppData\Local\GitHubDesktop\bin;C:\Users\nebul\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nebul\AppData\Roaming\npm;C:\Program Files\7-Zip;
+PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Common Files\Propellerhead Software\ReWire\;C:\Program Files\Common Files\Propellerhead Software\ReWire\;C:\Users\nebul\AppData\Local\Microsoft\WindowsApps;C:\Users\nebul\.dotnet\tools;C:\Users\nebul\AppData\Local\GitHubDesktop\bin;C:\Users\nebul\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\nebul\AppData\Roaming\npm;C:\Program Files\7-Zip;
 # environment
 COMPUTERNAME = DESKTOP-IFOT2SN
 # default
@@ -154,8 +148,6 @@ USERDOMAIN = DESKTOP-IFOT2SN
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# environment
-__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := run
 # default
@@ -195,8 +187,7 @@ SUFFIXES :=
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-SESSIONNAME =  
-Console
+SESSIONNAME = Console
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -204,7 +195,7 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
+# Load=91/1024=9%, Rehash=0, Collisions=8/118=7%
 
 # Pattern-specific Variable Values
 
@@ -212,10 +203,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/ 
-nebul/Desktop/NebulaOS, mtime 1659760186): 17 files, no impossibilities.
+# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659852164): 18 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -289,12 +279,13 @@ build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 24 / storage = 177 B / avg = 7 B
-# current buf: size = 8174 B / used = 177 B / count = 24 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 184 B / avg = 7 B
+# current buf: size = 8174 B / used = 184 B / count = 25 / avg = 7 B
 
-# strcache performance: lookups = 35 / hit rate = 31%
-# hash-table stats:
-# Load=24/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Sun Aug 07 12:29:35 2022
+# strcache performance: lookups = 36 / hit rate = 30%
+# hash-table  
+stats:
+# Load=25/8192=0%, Rehash=0, Collisions=0/36=0%
+# Finished Make data base on Sun Aug 07 18:03:37 2022
 
  

@@ -3,6 +3,26 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace NebulaOS.Graphics {
+    public class Color {
+        /// <summary>
+        /// Convert two RGB colors into a single string escape sequence
+        /// This uses the RGB escape sequence: \e[38;2;r;g;bm
+        /// </summary>
+        /// <param name="Foreground">The foreground color</param>
+        /// <param name="Background">The background color</param>
+        public static String CombineFB(RGB Foreground, RGB Background) {
+            return String.Format("\x1b[38;2;{0};{1};{2}m", Foreground.r, Foreground.g, Foreground.b) +
+                   String.Format("\x1b[48;2;{0};{1};{2}m", Background.r, Background.g, Background.b);
+        }
+
+        /// <summary>
+        /// Reset color escape sequence.
+        /// </summary>
+        public static String Reset() {
+            return "\x1b[0m";
+        }
+    }
+
     public class RGB {
         public int r = 0, g = 0, b = 0;
 
@@ -123,7 +143,7 @@ namespace NebulaOS.Graphics {
         /// </summary>
         /// <param name="color">The color to fade to.</param>
         /// <param name="time">The time to fade over.</param>
-        public void FadeInMS(RGB color, float time) {
+        public void FadeInMS(RGB color, float time, int incrementAmount = 100) {
             float timeMS = time;
             // 1 * 100 = 1/10th of a second
 
@@ -189,6 +209,26 @@ namespace NebulaOS.Graphics {
         public static string ResetBG() {
             return "\x1b[49m";
         }
+
+        /// <summary>
+        /// Convert color to gradient.
+        /// </summary>
+        /// <param name="toColor">The color to fade to.</param>
+        /// <param name="size">The size of the gradient.</param>
+        /// <returns>RGB color array based on the gradient settings.</returns>
+        public List<RGB> ToGradient(RGB toColor, int size) {
+            List<RGB> colors = new List<RGB>();
+            float percent = 0;
+
+            for (int i = 0; i < size; i++) {
+                percent += 100f / (float)size;
+                colors.Add(FadeTo(toColor, percent));
+            }
+
+            colors.Add(toColor);
+            return colors;
+        }
+
         #region Operators
         public static RGB operator +(RGB a, RGB b) { return new RGB(a.r + b.r, a.g + b.g, a.b + b.b); }
         public static RGB operator -(RGB a, RGB b) { return new RGB(a.r - b.r, a.g - b.g, a.b - b.b); }

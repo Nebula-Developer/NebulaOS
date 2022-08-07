@@ -1,2 +1,3 @@
 C:\Users\nebul\Desktop\NebulaOS\Build\MacOS\NebulaOS.pdb
+C:\Users\nebul\Desktop\NebulaOS\Build\MacOS\libMono.Unix.dylib
 C:\Users\nebul\Desktop\NebulaOS\Build\MacOS\NebulaOS
