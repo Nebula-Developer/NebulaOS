@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Diagnostics;
 using NebulaOS.NSystem;
@@ -30,27 +31,76 @@ namespace NebulaOS.Graphics {
         /// </summary>
         /// <param name="path">Path to the graphic file</param>
         /// <returns>Tuple list of the graphic file</returns>
-        public static List<Tuple<int, int, char>>? ReadGraphicFile(String path) {
-            String Contents = File.ReadAllText(path);
-            Contents = Contents.Replace("&S", " ").Replace("\n", "");
+        public static List<Tuple<int, int, char>> ReadGraphicFile(String path) {
+            String Contents = String.Join('\n', File.ReadAllLines(path));
+            Contents = Contents
+                .Replace(" ", "")
+                .Replace("&S", " ")
+                .Replace("&s", " ")
+                .Replace("&B", "\\")
+                .Replace("&b", "\\")
+                .Replace("\n", "")
+                .Replace("&SM", ";")
+                .Replace("&sm", ";");
+
             String[] GraphicData = Contents.Split(';');
             List<Tuple<int, int, char>> Graphic = new List<Tuple<int, int, char>>();
             Logging.LogInfo("Reading graphic file: " + path);
 
-            for (int i = 0; i < GraphicData.Length; i += 3) {
-                try {
-                    Graphic.Add(new Tuple<int, int, char>(
-                        int.Parse(GraphicData[i]),
-                        int.Parse(GraphicData[i + 1]),
-                        GraphicData[i + 2][0]
-                    ));
-                } catch {
-                    Logging.LogError("Error reading graphic file: " + path);
-                    return null;
+            for (int i = 0; i <= GraphicData.Length; i += 3) {
+                if (GraphicData[i] == "" || GraphicData[i] == ";") {
+                    continue;
                 }
+
+                if (GraphicData.Length < i + 3) {
+                    Logging.LogWarning("Graphic file has incomplete data in file: " + path);
+                    return Graphic;
+                }
+
+                int x = int.Parse(GraphicData[i]);
+                int y = int.Parse(GraphicData[i + 1]);
+                String c = GraphicData[i + 2];
+
+                if (c.Length == 0) {
+                    Logging.LogWarning("Empty character in graphic: " + path + " at " + x + "," + y);
+                    continue;
+                }
+
+                Graphic.Add(new Tuple<int, int, char>(x, y, c[0]));
             }
 
             return Graphic;
+        }
+
+        /// <summary>
+        /// Convert a string to a graphic.
+        /// </summary>
+        /// <param name="str">String to convert</param>
+        /// <returns>Graphic</returns>
+        public static string StringToGraphic(String str) {
+            String output = "";
+            int y = 0;
+
+            for (int i = 0; i < str.Length; i++) {
+                String character = str[i].ToString();
+                if (str[i] == '\n') {
+                    y++;
+                    output += "\n";
+                    continue;
+                }
+
+                character = character.Replace(" ", "&S")
+                    .Replace("\\", "&B")
+                    .Replace("\t", "")
+                    .Replace("\r", "")
+                    .Replace(";", "&SM");
+
+                if (character.Length > 0) {
+                    output += String.Format("{0};{1};{2};", i, y, character);
+                }
+            }
+
+            return output;
         }
     }
 

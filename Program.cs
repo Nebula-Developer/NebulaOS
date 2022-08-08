@@ -21,12 +21,6 @@ namespace NebulaOS {
             Console.Clear();
             Console.WriteLine("NebulaOS v0.0.7");
 
-            List<Tuple<int, int, char>>? GraphicTest = Graphic.ReadGraphicFile("C:\\Users\\nebul\\Desktop\\NebulaOS\\testgraphic.graphic");
-            if (GraphicTest == null) {
-                Console.WriteLine("Graphic test failed");
-                return 1;
-            }
-            
             Logging.LogInfo("Using drive: " + Config.GetDefaultDrive().Name);
             Logging.LogInfo("Creating user and system dependencies...");
             Deps.CreateDeps();
