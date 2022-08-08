@@ -8,10 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 07 18:03:37 2022
+# Make data base, printed on Mon Aug 08 16:43:08 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -35,7 +37,9 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17320_GVEXVNKSTILZAJCN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21908_RNTIHBEDCAHWLCAS
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -65,7 +69,7 @@ ONEDRIVE = C:\Users\nebul\OneDrive
 # makefile
 CURDIR := c:/Users/nebul/Desktop/NebulaOS
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -83,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 17320
+VSCODE_PID = 21908
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -195,7 +199,7 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=91/1024=9%, Rehash=0, Collisions=8/118=7%
+# Load=93/1024=9%, Rehash=0, Collisions=9/120=8%
 
 # Pattern-specific Variable Values
 
@@ -203,7 +207,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659852164): 18 files, no impossibilities.
+# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1659932966): 18 files, no impossibilities.
 
 # 18 files, no impossibilities in 1 directories.
 
@@ -216,7 +220,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-06 14:07:25
+#  Last modified 2022-08-08 16:27:01
 #  File has been updated.
 #  Successfully updated.
 
@@ -279,13 +283,12 @@ build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 184 B / avg = 7 B
-# current buf: size = 8174 B / used = 184 B / count = 25 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 180 B / avg = 7 B
+# current buf: size = 8174 B / used = 180 B / count = 25 / avg = 7 B
 
 # strcache performance: lookups = 36 / hit rate = 30%
-# hash-table  
-stats:
+# hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=0/36=0%
-# Finished Make data base on Sun Aug 07 18:03:37 2022
+# Finished Make data base on Mon Aug 08 16:43:08 2022
 
  

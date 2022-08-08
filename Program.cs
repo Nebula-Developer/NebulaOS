@@ -9,32 +9,23 @@ using NebulaOS.Files;
 using NebulaOS.Files.NJSON;
 using NebulaOS.NSystem;
 using NebulaOS.Graphics;
+using NebulaOS.Graphics.Effects;
+using NebulaOS.Maths;
+using NebulaOS.NSystem.Generic;
 
 namespace NebulaOS {
     public class Root {
         public static RootConfig Config = new RootConfig();
 
         public static int Main(String[] args) {
-            Console.WriteLine("NebulaOS v0.0.6");
-            Config = Deps.CreateSystem();
-
-            RGB bootStartCol = new RGB(250, 122, 100);
-            RGB bootEndCol = new RGB(237, 199, 142);
-
-            int bootHeight = Console.BufferHeight - 1;
             Console.Clear();
+            Console.WriteLine("NebulaOS v0.0.7");
 
-            List<RGB> gradient = bootStartCol.ToGradient(bootEndCol, bootHeight);
-            for (int i = 0; i < gradient.Count(); i++) {
-                Console.SetCursorPosition(0, i);
-                Console.Write(gradient[i].ToBGStr() + new String(' ', Console.BufferWidth));
+            List<Tuple<int, int, char>>? GraphicTest = Graphic.ReadGraphicFile("C:\\Users\\nebul\\Desktop\\NebulaOS\\testgraphic.graphic");
+            if (GraphicTest == null) {
+                Console.WriteLine("Graphic test failed");
+                return 1;
             }
-
-            String bootText = "Welcome";
-            Console.SetCursorPosition((Console.BufferWidth / 2) - (bootText.Length / 2), Console.BufferHeight / 2);
-            Console.Write(Color.CombineFB(new RGB(0, 0, 0), gradient[gradient.Count() / 2]) + bootText);
-
-            Console.ReadKey(true);
             
             Logging.LogInfo("Using drive: " + Config.GetDefaultDrive().Name);
             Logging.LogInfo("Creating user and system dependencies...");
@@ -42,6 +33,12 @@ namespace NebulaOS {
 
             Logging.LogInfo("Done");
             Logging.Log("NebulaOS.Booting", "Booting NebulaOS...", Logging.LogType.System);
+
+            Console.Clear();
+            Window win = new Window(Console.WindowWidth - 5, Console.WindowHeight - 5, "NebulaOS", new WindowTheme());
+            win.Init();
+            Console.ReadKey();
+            Console.Clear();
             return 0;
         }
     }

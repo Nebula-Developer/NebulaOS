@@ -66,3 +66,14 @@ v0.0.6:
             I recommend using F11. Feel free to modify the setting.
     - Added gradient function
     - Fixed calculations for gradient
+
+v0.0.7:
+    - Started work on effects class
+    - Added easing class
+    - Created easing types such as exponential, linear, ease in, ease out, etc.
+    - Fixed time calculation for easing
+    - Note: Tests for the easing can be found in Ease.log. The log file will be removed later.
+    - Added Graphic reader for loading ASCII assets
+    - Implemented graphic test
+    - Added window constructor
+    - Created window theming system (Will be expanded later)

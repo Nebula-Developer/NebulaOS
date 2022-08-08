@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using NebulaOS.NSystem;
 
 namespace NebulaOS.Graphics {
     public class Color {
@@ -20,6 +21,36 @@ namespace NebulaOS.Graphics {
         /// </summary>
         public static String Reset() {
             return "\x1b[0m";
+        }
+    }
+
+    public class Graphic {
+        /// <summary>
+        /// Read from a graphic file and return the contents as a tuple list.
+        /// </summary>
+        /// <param name="path">Path to the graphic file</param>
+        /// <returns>Tuple list of the graphic file</returns>
+        public static List<Tuple<int, int, char>>? ReadGraphicFile(String path) {
+            String Contents = File.ReadAllText(path);
+            Contents = Contents.Replace("&S", " ").Replace("\n", "");
+            String[] GraphicData = Contents.Split(';');
+            List<Tuple<int, int, char>> Graphic = new List<Tuple<int, int, char>>();
+            Logging.LogInfo("Reading graphic file: " + path);
+
+            for (int i = 0; i < GraphicData.Length; i += 3) {
+                try {
+                    Graphic.Add(new Tuple<int, int, char>(
+                        int.Parse(GraphicData[i]),
+                        int.Parse(GraphicData[i + 1]),
+                        GraphicData[i + 2][0]
+                    ));
+                } catch {
+                    Logging.LogError("Error reading graphic file: " + path);
+                    return null;
+                }
+            }
+
+            return Graphic;
         }
     }
 
