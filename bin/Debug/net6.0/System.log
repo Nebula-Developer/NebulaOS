@@ -1,0 +1,60 @@
+[NebulaOS.Root.Main] (2022-08-09 17:33:52) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:33:52) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:33:52) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:33:55) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:33:55) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:33:55) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:33:59) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:33:59) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:33:59) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:35:47) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:35:47) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:35:47) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:36:02) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:36:02) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:36:02) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:44:31) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:44:31) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:44:31) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:44:41) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:44:41) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:44:41) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:44:46) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:44:46) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:44:46) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:44:50) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:44:50) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:44:50) Info: Loading system..
+[NebulaOS.Root.Main] (2022-08-09 17:58:16) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:58:16) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:58:16) Info: Loading system..
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:16) Error: RootConfig value Drives is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:16) Error: RootConfig value DefaultDrive is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:16) Error: RootConfig value DrivePath is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:16) Error: Info value Minor is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:16) Error: System creation failed. Please fix the above errors and restart the system.
+[NebulaOS.Root.Main] (2022-08-09 17:58:16) Info: System root variables loaded.
+[NebulaOS.Root.Main] (2022-08-09 17:58:16) Info: Done
+[NebulaOS.Booting] (2022-08-09 17:58:16) System: Booting NebulaOS...
+[NebulaOS.Root.Main] (2022-08-09 17:58:23) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:58:23) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:58:23) Info: Loading system..
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:23) Error: RootConfig value Drives is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:23) Error: RootConfig value DefaultDrive is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:23) Error: RootConfig value DrivePath is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:23) Error: Info value Minor is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:23) Error: System creation failed. Please fix the above errors and restart the system.
+[NebulaOS.Root.Main] (2022-08-09 17:58:23) Info: System root variables loaded.
+[NebulaOS.Root.Main] (2022-08-09 17:58:23) Info: Done
+[NebulaOS.Booting] (2022-08-09 17:58:23) System: Booting NebulaOS...
+[NebulaOS.Root.Main] (2022-08-09 17:58:27) Info: Using drive: OS
+[NebulaOS.Root.Main] (2022-08-09 17:58:27) Info: Creating user and system dependencies...
+[NebulaOS.Root.Main] (2022-08-09 17:58:27) Info: Loading system..
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:27) Error: RootConfig value Drives is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:27) Error: RootConfig value DefaultDrive is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:27) Error: RootConfig value DrivePath is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:27) Error: Info value Minor is undefined.
+[NebulaOS.NSystem.Deps.CreateSystem] (2022-08-09 17:58:27) Error: System creation failed. Please fix the above errors and restart the system.
+[NebulaOS.Root.Main] (2022-08-09 18:15:46) Info: System root variables loaded.
+[NebulaOS.Root.Main] (2022-08-09 18:15:46) Info: Done
+[NebulaOS.Booting] (2022-08-09 18:15:46) System: Booting NebulaOS...

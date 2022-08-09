@@ -15,6 +15,43 @@ using NebulaOS.Files;
 using Required = Newtonsoft.Json.Required;
 
 namespace NebulaOS.NSystem {
+    public class Version {
+        public int Major { get; set; }
+        public int Minor { get; set; }
+        public int Sub { get; set; }
+
+        public Version(int major, int minor, int sub) {
+            this.Major = major;
+            this.Minor = minor;
+            this.Sub = sub;
+        }
+
+        public Version(String version) {
+            String[] split = version.Split('.');
+            this.Major = int.Parse(split[0]);
+            this.Minor = int.Parse(split[1]);
+            this.Sub = int.Parse(split[2]);
+        }
+
+        public override string ToString() {
+            return $"{this.Major}.{this.Minor}.{this.Sub}";
+        }
+    }
+
+    public enum RelState {
+        Release,
+        Beta,
+        Alpha,
+        Debug
+    }
+
+    public class Info {
+        public Version Version = new Version(0, 0, 0);
+        public String Name = "Undefined";
+        public String Author = "John Doe";
+        public RelState State = RelState.Alpha;
+    }
+
     public class DriveData {
         public string Data;
         public DriveData(string data) {

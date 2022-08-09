@@ -1,3 +1,0 @@
-C:\Users\nebul\Desktop\NebulaOS\Build\Linux\NebulaOS.pdb
-C:\Users\nebul\Desktop\NebulaOS\Build\Linux\libMono.Unix.so
-C:\Users\nebul\Desktop\NebulaOS\Build\Linux\NebulaOS

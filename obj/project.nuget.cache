@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9pBGFLi9S8zgLQAtxwKwrvSIw76JvU2ObbqTNDZQs4IUT5i9SXaKJafkZ3At3wD3v8gekPxYWz/a3Q7jxaIemg==",
+  "dgSpecHash": "vIJW3IYLCncBLENLaSsd+6nD5WH+WyzvpW8uBCuygjgOZ1SVhmZJPE/rv5Gec4SA97Nd5zwDsLM4qOPkPTQ5MQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nebul\\Desktop\\NebulaOS\\NebulaOS.csproj",
   "expectedPackageFiles": [
@@ -18,8 +18,7 @@
     "C:\\Users\\nebul\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
     "C:\\Users\\nebul\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\nebul\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\nebul\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\nebul\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\6.0.6\\microsoft.netcore.app.host.osx-x64.6.0.6.nupkg.sha512"
+    "C:\\Users\\nebul\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

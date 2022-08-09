@@ -53,7 +53,7 @@ v0.0.5:
     - Created fade method
     - Created fade in MS method
     - Added OnFade event
-    - Fixed innacurate percantage calculations for fading
+    - Bugfix: Fixed innacurate percantage calculations for fading
     - TODO: Create custom terminal for NebulaOS
     - Bug: Colors do not work on windows command lines (CMD, PS)
            Please use the VSCode terminal for now. (Will fix later)
@@ -61,19 +61,26 @@ v0.0.5:
 v0.0.6:
     - Cloned Windows Terminal and modified settings to fit NebulaOS
     - Removed terminal title bar
-    - Fixed color issues
+    - Bugfix: Fixed color issues
     - Note: When running NebulaOS, please now use the Windows Terminal.
             I recommend using F11. Feel free to modify the setting.
     - Added gradient function
-    - Fixed calculations for gradient
+    - Bugfix: Remade calculations for gradient
 
 v0.0.7:
     - Started work on effects class
     - Added easing class
     - Created easing types such as exponential, linear, ease in, ease out, etc.
-    - Fixed time calculation for easing
+    - Bugfix: Altered time calculation for easing
     - Note: Tests for the easing can be found in Ease.log. The log file will be removed later.
     - Added Graphic reader for loading ASCII assets
     - Implemented graphic test
     - Added window constructor
     - Created window theming system (Will be expanded later)
+
+v0.0.8:
+    - Removed ease log
+    - General cleanup
+    - Preperation for release
+    - Added info class for version and readonly information storing
+    - Bugfix: Fixed whileloop crash in root

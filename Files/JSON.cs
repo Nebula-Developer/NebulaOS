@@ -59,37 +59,24 @@ namespace NebulaOS.Files.NJSON {
         /// <returns>List of Tuple[Name, Value] (String, string)</returns>
         public static List<Tuple<String, String>> GetUnknownValues(dynamic json, Type type) {
             List<Tuple<String, String>> unknownValues = new List<Tuple<String, String>>();
-            foreach (var item in json) {
-                if (item.Value.GetType() == typeof(JArray)) {
-                    var genericZero = type.GetField(item.Name).FieldType.GetGenericArguments()[0];
-                    for (int i = 0; i < item.Value.Count; i++) {
-                        if (item.Value[i].GetType() == typeof(JObject)) {
-                            try {
-                                List<Tuple<String, String>> unknownValsItem = GetUnknownValues(item.Value[i], genericZero);
-                                foreach (var unknownVal in unknownValsItem) {
-                                    unknownValues.Add(new Tuple<String, String>(item.Name + "." + unknownVal.Item1, unknownVal.Item2));
-                                }
-                            } catch {
-                                unknownValues.Add(new Tuple<String, String>(item.Name, item.Value[i].ToString()));
-                            }
-                        }
-                    }
-                } else if (item.Value.GetType() == typeof(JObject)) {
-                    try {
-                        List<Tuple<String, String>> unknownValsItem = GetUnknownValues(item.Value, type.GetField(item.Name).FieldType);
-                        foreach (var unknownVal in unknownValsItem) {
-                            unknownValues.Add(new Tuple<String, String>(item.Name + "." + unknownVal.Item1, unknownVal.Item2));
-                        }
-                    } catch {
-                        unknownValues.Add(new Tuple<String, String>(item.Name, item.Value.ToString()));
-                    }
-                } else {
-                    if (type.GetProperty(item.Name) == null && type.GetField(item.Name) == null) {
-                        unknownValues.Add(new Tuple<String, String>(item.Name, item.Value.ToString()));
-                    }
-                }
-            }
+
             return unknownValues;
+        }
+
+        public class TypeItem {
+            public String Name;
+            public Type Type;
+            public bool IsArray() { return Type.IsArray; }
+            public bool IsClass() { return Type.IsClass; }
+            public bool IsGenericType() { return Type.IsGenericType; }
+            public bool IsSystemClass() { return Type.Namespace?.StartsWith("System") ?? false; }
+            public Type? GetElemType() { return Type.GetElementType(); }
+            public Type? GetGenericArgument() { return Type.GetGenericArguments()[0]; }
+            
+            public TypeItem(String name, Type type) {
+                Name = name;
+                Type = type;
+            }
         }
 
         /// <summary>
@@ -100,42 +87,34 @@ namespace NebulaOS.Files.NJSON {
         /// <returns>List of values that are undefined in the JSON dynamic.</returns>
         public static List<String> GetUndefinedValues(dynamic json, Type type) {
             List<String> undefinedValues = new List<String>();
-            foreach (var field in type.GetFields()) {
-                if (field.FieldType.IsGenericType) {
-                    if (json[field.Name] == null) {
-                        undefinedValues.Add(field.Name);
-                    } else {
-                        for (int i = 0; i < json[field.Name].Count; i++) {
-                            if (json[field.Name][i].GetType() == typeof(JObject)) {
-                                List<String> undefinedValsArr = GetUndefinedValues(json[field.Name][i], field.FieldType.GetGenericArguments()[0]);
-                                for (int j = 0; j < undefinedValsArr.Count; j++) {
-                                    undefinedValues.Add(field.Name + "." + undefinedValsArr[j]);
-                                }
-                            }
-                        }
-                    }
-                } if (field.FieldType.IsClass && field.FieldType.GetConstructor(Type.EmptyTypes) != null) {
-                    if (json[field.Name] == null) {
-                        undefinedValues.Add(field.Name);
-                    } else if (!json[field.Name].HasValues || json[field.Name].GetType() == typeof(JValue) || json[field.Name].GetType() == typeof(JArray)) {
-                        List<String> undefinedValsArr = GetUndefinedValues(json[field.Name], field.FieldType);
-                        for (int j = 0; j < undefinedValsArr.Count; j++) {
-                            undefinedValues.Add(field.Name + "." + undefinedValsArr[j]);
-                        }
-                    }
-                } else {
-                    if (json[field.Name] == null && !json[field.Name].HasValues) {
-                        undefinedValues.Add(field.Name);
-                    } else if (json[field.Name].GetType() == typeof(JObject) && json[field.Name] != null) {
-                        try {
-                            List<String>? undefinedValsArr = GetUndefinedValues(json[field.Name], field.FieldType);
-                            for (int j = 0; j < undefinedValsArr.Count; j++) {
-                                undefinedValues.Add(field.Name + "." + undefinedValsArr[j]);
-                            }
-                        } catch {
-                            undefinedValues.Add(field.Name);
-                        }
-                    }
+
+            FieldInfo[] fields = type.GetFields();
+            PropertyInfo[] properties = type.GetProperties();
+
+            List<TypeItem> items = new List<TypeItem>();
+            items.AddRange(fields.Select(f => new TypeItem(f.Name, f.FieldType)));
+            items.AddRange(properties.Select(p => new TypeItem(p.Name, p.PropertyType)));
+
+            foreach (TypeItem item in items) {
+                if (json[item.Name] == null)
+                    undefinedValues.Add(item.Name);
+
+                else if (item.IsGenericType()) {
+                    Type? elementType = item.GetGenericArgument();
+                    if (elementType != null)
+                        foreach (dynamic element in json[item.Name])
+                            undefinedValues.AddRange(GetUndefinedValues(element, elementType));
+                }
+
+                else if (item.IsArray()) {
+                    Type? elementType = item.GetElemType();
+                    if (elementType != null)
+                        foreach (dynamic element in json[item.Name])
+                            undefinedValues.AddRange(GetUndefinedValues(element, elementType));
+                }
+
+                else if (item.IsClass() && !item.IsSystemClass()) {
+                    undefinedValues.AddRange(GetUndefinedValues(json[item.Name], item.Type));
                 }
             }
 

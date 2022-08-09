@@ -18,38 +18,39 @@ namespace NebulaOS.NSystem {
     /// <summary>
     /// Initial system creation call
     /// </summary>
-    public static RootConfig CreateSystem() {
+    public static void CreateSystem() {
       OSFile.CreateNonExisting(Paths.GetRootPath("config.json"), JSON.Serialize(new RootConfig(), true));
       dynamic? config = JSON.ParseFile(Paths.GetRootPath("config.json"));
       if (config == null) { OSFile.Write(Paths.GetRootPath("config.json"), JSON.Serialize(new RootConfig(), true)); config = JSON.ParseFile(Paths.GetRootPath("config.json")); }
-      
-      List<Tuple<String, String>> UnknownValues = JSON.GetUnknownValues(config, typeof(RootConfig));
-      List<String> UndefinedValues = JSON.GetUndefinedValues(config, typeof(RootConfig));
 
-      if (UndefinedValues.Count > 0) {
-        foreach (String value in UndefinedValues) {
-          Logging.LogError("Value " + value + " is undefined (or in wrong type) in root/config.json");
-        }
+      OSFile.CreateNonExisting(Paths.GetRootPath("sysinfo.json"), JSON.Serialize(new Info(), true));
+      dynamic? sysinfo = JSON.ParseFile(Paths.GetRootPath("sysinfo.json"));
+      if (sysinfo == null) { OSFile.Write(Paths.GetRootPath("sysinfo.json"), JSON.Serialize(new Info(), true)); sysinfo = JSON.ParseFile(Paths.GetRootPath("sysinfo.json")); }
+
+      List<String> undefinedRootConfigValues = JSON.GetUndefinedValues(sysinfo, typeof(RootConfig));
+      List<String> undefinedInfoValues = JSON.GetUndefinedValues(sysinfo, typeof(Info));
+
+      foreach (String val in undefinedRootConfigValues)
+        Logging.LogError("RootConfig value " + val + " is undefined.");
+
+      foreach (String val in undefinedInfoValues)
+        Logging.LogError("Info value " + val + " is undefined.");
+
+      if (undefinedRootConfigValues.Count > 0 || undefinedInfoValues.Count > 0) {
+        Logging.LogError("System creation failed. Please fix the above errors and restart the system.");
+        Console.WriteLine("There was an issue with the system bootup. Please fix the errors below and restart the system.");
+        foreach (String val in undefinedRootConfigValues)
+          Console.WriteLine("RootConfig value " + val + " is undefined.");
+        foreach (String val in undefinedInfoValues)
+          Console.WriteLine("Info value " + val + " is undefined.");  
+        Console.WriteLine("Press any key to exit...");
       }
 
-      if (UndefinedValues.Count > 0 || config == null) {
-        Console.WriteLine("Found undefined values. Would you like to reset the root config? (y/n)");
-        if (Console.ReadKey(true).Key == ConsoleKey.Y) {
-          OSFile.Write(Paths.GetRootPath("config.json"), JSON.Serialize(new RootConfig(), true));
-          config = JSON.ParseFile(Paths.GetRootPath("config.json"));
-        } else {
-          Console.WriteLine("Please fix before rebooting.\nExiting...");
-          Environment.Exit(0);
-        }
-      }
+      Root.Config = JSON.ParseFile<RootConfig>(Paths.GetRootPath("config.json")) ?? new RootConfig();
+      Root.SystemInfo = JSON.ParseFile<Info>(Paths.GetRootPath("sysinfo.json")) ?? new Info();
 
-      if (UnknownValues.Count > 0) {
-        foreach (Tuple<String, String> value in UnknownValues) {
-          Logging.LogError("Value " + value.Item1 + " is unknown in root/config.json, we recommend you remove it.");
-        }
-      }
-
-      return JSON.ParseFile<RootConfig>(Paths.GetRootPath("config.json")) ?? new RootConfig();
+      Console.ReadKey();
+      return;
     }
   }
 }

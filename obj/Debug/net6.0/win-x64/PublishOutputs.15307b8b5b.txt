@@ -1,2 +1,0 @@
-C:\Users\nebul\Desktop\NebulaOS\Build\Windows\NebulaOS.pdb
-C:\Users\nebul\Desktop\NebulaOS\Build\Windows\NebulaOS.exe
