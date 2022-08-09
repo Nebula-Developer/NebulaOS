@@ -81,6 +81,6 @@ v0.0.7:
 v0.0.8:
     - Removed ease log
     - General cleanup
-    - Preperation for release
+    - Preparation for release
     - Added info class for version and readonly information storing
     - Bugfix: Fixed whileloop crash in root
