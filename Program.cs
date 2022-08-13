@@ -20,7 +20,7 @@ namespace NebulaOS {
 
         public static int Main(String[] args) {
             Console.CursorVisible = false;
-            Console.WriteLine("NebulaOS v0.0.8");
+            Console.WriteLine("NebulaOS v0.0.9");
 
             Logging.LogInfo("Using drive: " + Config.GetDefaultDrive().Name);
             Logging.LogInfo("Creating user and system dependencies...");
@@ -32,7 +32,6 @@ namespace NebulaOS {
 
             Logging.LogInfo("Done");
             Logging.Log("NebulaOS.Booting", "Booting NebulaOS...", Logging.LogType.System);
-
 
             Console.Clear();
             Window win = new Window(Console.WindowWidth - 5, Console.WindowHeight - 5, "NebulaOS", new WindowTheme());

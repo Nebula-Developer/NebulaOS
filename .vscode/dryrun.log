@@ -1,5 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/nicocook/Documents/GitHub/NebulaOS'
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/nebul/Desktop/NebulaOS'
 dotnet run
-make: Leaving directory `/Users/nicocook/Documents/GitHub/NebulaOS'
+make: Leaving directory 'c:/Users/nebul/Desktop/NebulaOS'
  

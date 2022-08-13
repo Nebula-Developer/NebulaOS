@@ -18,7 +18,8 @@ namespace NebulaOS.Tests {
 
   public class GlobalTests {
     public static List<Test> Tests = new List<Test>() {
-      new EaseTest()
+      new EaseTest(),
+      new TetrisTest()
     };
   }
 }

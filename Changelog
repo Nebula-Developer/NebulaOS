@@ -89,3 +89,17 @@ v0.0.8:
     - Note: You can create your own test class for testing NebulaOS features.
             If it has the true boolean "CallOnBoot", it will be called from the dependency loader.
             This may change later.
+
+v0.0.9:
+    - Started mouse driver implementation
+    - Started Game class implementation
+    - Implemented delta time
+    - Bugfix: Fixed incorrect delta time calculation (Wrong loop sleeping)
+    - Created function to fit Vector2i to bounds of the window
+    - Boot cleanup
+    - Added Tetris game test
+    - Added game class input system
+    - Changed Tetris theme (test)
+    - Removed autoboot for tetris test.
+    - Note: To use tetris, turn on the boot flag in the testing class.
+            The game will not autoboot.

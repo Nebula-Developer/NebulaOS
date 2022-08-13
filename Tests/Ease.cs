@@ -12,7 +12,7 @@ namespace NebulaOS.Tests.TestClasses {
       Curve c = new Curve(0, Console.BufferWidth - 1);
       String testEaseTest = "R ->";
 
-      c.EaseOverMS(2000, Curve.Ease.EaseInOut, (x) => {
+      c.EaseOverMS(2000, Curve.Ease.ExponentialInOut, (x) => {
         Console.SetCursorPosition((int)x > Console.BufferWidth - 1 ? Console.BufferWidth - 1 : (int)x, Console.BufferHeight - 1);
         Console.WriteLine('%');
 
@@ -23,7 +23,7 @@ namespace NebulaOS.Tests.TestClasses {
       testEaseTest = "L <-";
       c = new Curve(Console.BufferWidth - 1, 0);
 
-      c.EaseOverMS(2000, Curve.Ease.EaseInOut, (x) => {
+      c.EaseOverMS(2000, Curve.Ease.ExponentialInOut, (x) => {
         Console.SetCursorPosition((int)x < 0 ? 0 : (int)x, Console.BufferHeight - 1);
         Console.WriteLine('%');
 

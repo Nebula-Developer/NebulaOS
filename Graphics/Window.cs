@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using System;
 using NebulaOS.Graphics;
 
@@ -51,6 +52,50 @@ namespace NebulaOS.Graphics {
             Print.AtPos(Title, this.CenterText(Title, 0), Theme.TitleTextColor, Theme.TitlebarBackground, true);
 
             Console.Write(RGB.Reset());
+        }
+
+        /// <summary>
+        /// Draw text to the window
+        /// </summary>
+        /// <param name="text">Text to draw</param>
+        /// <param name="pos">Position to draw the text</param>
+        /// <param name="fgColor">Foreground color of the text</param>
+        /// <param name="bgColor">Background color of the text</param>
+        /// <param name="clear">Clear the window before drawing</param>
+        public void DrawText(string text, Vector2i pos, RGB fgColor, RGB bgColor) {
+            pos = this.FitToBounds(pos, text);
+            Print.AtPos(text, pos, fgColor, bgColor, true);
+        }
+
+        /// <summary>
+        /// Fit Vector2i to bounds of the screen.
+        /// </summary>
+        /// <param name="pos">Position to fit</param>
+        /// <returns>Fitted position</returns>
+        public Vector2i FitToBounds(Vector2i pos) {
+            pos.Y += 1;
+            if (pos.X < 0) { pos.X = 0; }
+            if (pos.X > Width) { pos.X = Width; }
+
+            if (pos.Y < 1) { pos.Y = 1; }
+            if (pos.Y > Height - 1) { pos.Y = Height - 1; }
+            return pos;
+        }
+
+        /// <summary>
+        /// Fit Vector2i to bounds of the screen based on a string.
+        /// </summary>
+        /// <param name="pos">Position to fit</param>
+        /// <param name="text">Text to fit</param>
+        /// <returns>Fitted position</returns>
+        public Vector2i FitToBounds(Vector2i pos, string text) {
+            pos.Y += 1;
+            if (pos.X < 0) { pos.X = 0; }
+            if (pos.X > Width - text.Length) { pos.X = Width - text.Length; }
+
+            if (pos.Y < 1) { pos.Y = 1; }
+            if (pos.Y > Height - 1) { pos.Y = Height - 1; }
+            return pos;
         }
     }
 }
