@@ -19,7 +19,6 @@ namespace NebulaOS {
         public static Info SystemInfo = new Info();
 
         public static int Main(String[] args) {
-            Console.Clear();
             Console.CursorVisible = false;
             Console.WriteLine("NebulaOS v0.0.8");
 

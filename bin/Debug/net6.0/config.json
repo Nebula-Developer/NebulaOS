@@ -2,12 +2,12 @@
   "Drives": [
     {
       "Name": "OS",
-      "Tydpe": 0,
+      "Type": 0,
       "data": {
-        "Dafta": "TestData"
+        "Data": "TestData"
       }
     }
   ],
-  "DefaultDrdive": "OS",
+  "DefaultDrive": "OS",
   "DrivePath": "Undefined"
 }

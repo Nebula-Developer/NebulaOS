@@ -53,5 +53,31 @@ namespace NebulaOS.Files {
                 File.WriteAllText(path, data);
             }
         }
+
+        /// <summary>
+        /// Create a directory, only if it doesn't exist.
+        /// </summary>
+        /// <param name="path">The path to the directory.</param>
+        public static void CreateNonExistingDir(String path) {
+            if (!Directory.Exists(path)) {
+                Directory.CreateDirectory(path);
+            }
+        }
+
+        /// <summary>
+        /// Create a directory with spesified files and directories, only if it doesn't exist.
+        /// </summary>
+        /// <param name="path">The path to the directory.</param>
+        /// <param name="files">The files to create.</param>
+        /// <param name="directories">The directories to create.</param>
+        public static void CreateNonExistingDir(String path, List<String> files, List<String> directories) {
+            if (!Directory.Exists(path)) {
+                Directory.CreateDirectory(path);
+                foreach (String file in files)
+                    File.Create(Path.Combine(path, file));
+                foreach (String dir in directories)
+                    Directory.CreateDirectory(Path.Combine(path, dir));
+            }
+        }
     }
 }

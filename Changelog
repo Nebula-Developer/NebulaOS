@@ -84,3 +84,8 @@ v0.0.8:
     - Preparation for release
     - Added info class for version and readonly information storing
     - Bugfix: Fixed whileloop crash in root
+    - Added test directory
+    - Create test class (for calling from main function in development)
+    - Note: You can create your own test class for testing NebulaOS features.
+            If it has the true boolean "CallOnBoot", it will be called from the dependency loader.
+            This may change later.

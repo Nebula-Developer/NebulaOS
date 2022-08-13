@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 using NebulaOS.Files;
 using NebulaOS.Files.NJSON;
+using NebulaOS.Tests;
 
 namespace NebulaOS.NSystem {
   public class Deps {
@@ -12,7 +13,13 @@ namespace NebulaOS.NSystem {
     /// This includes package created dependencies, along with system dependencies.
     /// </summary>
     public static void CreateDeps() {
-      
+      Logging.LogInfo("Creating test directory structure for stored JSON data...");
+      OSFile.CreateNonExistingDir(Paths.GetRootPath("Tests"));
+      foreach (Test t in GlobalTests.Tests) {
+        if (t.CallOnBoot()) {
+          t.Run();
+        }
+      }
     }
 
     /// <summary>
@@ -27,7 +34,7 @@ namespace NebulaOS.NSystem {
       dynamic? sysinfo = JSON.ParseFile(Paths.GetRootPath("sysinfo.json"));
       if (sysinfo == null) { OSFile.Write(Paths.GetRootPath("sysinfo.json"), JSON.Serialize(new Info(), true)); sysinfo = JSON.ParseFile(Paths.GetRootPath("sysinfo.json")); }
 
-      List<String> undefinedRootConfigValues = JSON.GetUndefinedValues(sysinfo, typeof(RootConfig));
+      List<String> undefinedRootConfigValues = JSON.GetUndefinedValues(config, typeof(RootConfig));
       List<String> undefinedInfoValues = JSON.GetUndefinedValues(sysinfo, typeof(Info));
 
       foreach (String val in undefinedRootConfigValues)
@@ -44,12 +51,12 @@ namespace NebulaOS.NSystem {
         foreach (String val in undefinedInfoValues)
           Console.WriteLine("Info value " + val + " is undefined.");  
         Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
+        Environment.Exit(-1);
       }
 
       Root.Config = JSON.ParseFile<RootConfig>(Paths.GetRootPath("config.json")) ?? new RootConfig();
       Root.SystemInfo = JSON.ParseFile<Info>(Paths.GetRootPath("sysinfo.json")) ?? new Info();
-
-      Console.ReadKey();
       return;
     }
   }
