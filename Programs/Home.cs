@@ -28,6 +28,15 @@ namespace NebulaOS.Programs.SystemPrograms {
         win.DrawBox(new Vector2i(i * (boxSizes * 2) + (i * (boxSpacing + 1)), 0), boxSizes);
       }
 
+      Console.WriteLine("NebulaOS v0.0.9");
+      Console.WriteLine("Press any key to continue...");
+      Console.ReadKey();
+
+      Window win = new Window(Console.WindowWidth - 5, Console.WindowHeight - 5, "NebulaOS", new WindowTheme());
+
+      win.LoadTheme(Paths.GetRootPath("sys/themes/Default.json"));
+      win.Init();
+      win.DrawHorizontalLine(-10, 1000, 7, new RGB(255, 255, 255), new RGB(0, 0, 0));
       Console.ReadKey();
     }
   }

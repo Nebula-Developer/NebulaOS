@@ -1,4 +1,3 @@
-using System.Threading.Tasks.Dataflow;
 using System;
 
 using NebulaOS.Graphics;
@@ -254,8 +253,6 @@ namespace NebulaOS.Graphics {
             Print.AtPos(text, pos, fgColor, bgColor, true);
         }
 
-        /// <summary>
-        /// Draw a horizontal line to the window
         /// </summary>
         /// <param name="start">Start position of the line</param>
         /// <param name="end">End position of the line</param>
@@ -265,7 +262,6 @@ namespace NebulaOS.Graphics {
         public void DrawHorizontalLine(int start, int end, int y, RGB? fgColor = null, RGB? bgColor = null, String? character = null) {
             start = start < 0 ? 0 : start;
             end = end > Width ? Width : end;
-
             y = y < 1 ? 1 : y;
             y = y > Height - 1 ? Height - 1 : y;
 
@@ -417,9 +413,3 @@ namespace NebulaOS.Graphics {
         }
     }
 }
-
-// 0000000000
-// 0000000000
-// 0000000000
-// 0000000000
-// 0000000000

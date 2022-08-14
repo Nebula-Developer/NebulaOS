@@ -14,6 +14,7 @@
 [NebulaOS.Root.Main] (2022-08-13 20:15:00) Info: Done
 [NebulaOS.Booting] (2022-08-13 20:15:00) System: Booting NebulaOS...
 [NebulaOS.Root.Main] (2022-08-13 20:15:00) Info: Console cleared, initializing boot window...
+<<<<<<< HEAD
 [NebulaOS.Root.Main] (2022-08-14 13:32:48) Info: Using drive: OS
 [NebulaOS.Root.Main] (2022-08-14 13:32:48) Info: Loading system dependencies..
 [NebulaOS.Root.Main] (2022-08-14 13:32:48) Info: System variables loaded.
@@ -1004,3 +1005,5 @@
 [NebulaOS.Booting] (2022-08-14 14:24:48) System: Booting NebulaOS...
 [NebulaOS.Root.Main] (2022-08-14 14:24:48) Info: Console cleared, initializing boot window...
 [NebulaOS.Files.NJSON.JSON.ParseFile] (2022-08-14 14:24:48) Error: Could not find a part of the path 'C:\Users\nebul\Desktop\NebulaOS\bin\Debug\net6.0\sys\themes\Default.json'.
+=======
+>>>>>>> 9a446851f2162cf6ce061541d84674c539dd08f6

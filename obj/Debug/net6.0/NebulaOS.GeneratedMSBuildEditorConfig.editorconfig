@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NebulaOS
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\nebul\Desktop\NebulaOS\
+=======
+build_property.ProjectDir = /Users/nicocook/Documents/GitHub/NebulaOS/
+>>>>>>> 9a446851f2162cf6ce061541d84674c539dd08f6

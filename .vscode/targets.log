@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 13 13:08:51 2022
+# Make data base, printed on Sun Aug 14 14:28:27 2022
 
 # Variables
 
@@ -21,11 +21,9 @@ LC_ALL = C
 # environment
 USERPROFILE = C:\Users\nebul
 # environment
-LOCAL_GIT_DIRECTORY = C:\Users\nebul\AppData\Local\GitHubDesktop\app-3.0.5\resources\app\git
-# environment
 LOCALAPPDATA = C:\Users\nebul\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\nebul\AppData\Local\GitHubDesktop\app-3.0.5
+VSCODE_CWD = C:\Users\nebul\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -39,7 +37,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6732_HDNRUJOVUIJFRKPP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12340_IBQXQUVHUDVXNLZI
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -53,7 +51,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\nebul\AppData\Roaming\Code\CachedData\da76f93349a72022ca4670c1b84860304616aaa2
+VSCODE_CODE_CACHE_PATH = C:\Users\nebul\AppData\Roaming\Code\CachedData\6d9b74a70ca9c7733b29f0456fd8195364076dda
 # environment
 LANG = C
 # default
@@ -89,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 6732
+VSCODE_PID = 12340
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -154,8 +152,6 @@ USERDOMAIN = DESKTOP-IFOT2SN
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# environment
-__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := run
 # default
@@ -185,7 +181,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\nebul\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\a3cc19a553ed2ccf0bda860b303fbb3a-1.70.0-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\a3cc19a553ed2ccf0bda860b303fbb3a-1.70.1-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -196,10 +192,6 @@ SUFFIXES :=
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
@@ -207,18 +199,17 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=9/124=7%
+# Load=93/1024=9%, Rehash=0, Collisions=9/120=8%
 
-# Pattern- 
-specific Variable Values
+# Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1660350058): 21 files, no impossibilities.
+# . (key c:/Users/nebul/Desktop/NebulaOS, mtime 1660440684): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -292,12 +283,12 @@ build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 199 B / avg = 7 B
-# current buf: size = 8174 B / used = 199 B / count = 28 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 209 B / avg = 7 B
+# current buf: size = 8174 B / used = 209 B / count = 29 / avg = 7 B
 
-# strcache performance: lookups = 39 / hit rate = 28%
+# strcache performance: lookups = 40 / hit rate = 27%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=0/39=0%
-# Finished Make data base on Sat Aug 13 13:08:51 2022
+# Load=29/8192=0%, Rehash=0, Collisions=0/40=0%
+# Finished Make data base on Sun Aug 14 14:28:27 2022
 
  
