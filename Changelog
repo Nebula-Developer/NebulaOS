@@ -103,3 +103,12 @@ v0.0.9:
     - Removed autoboot for tetris test.
     - Note: To use tetris, turn on the boot flag in the testing class.
             The game will not autoboot.
+
+v0.1.0:
+    - Note: This is the first version of NebulaOS that will be released.
+            Please note that the project is not stable yet.
+    - Created boot menu
+    - Added DrawConfig class containing various ASCII characters and emojis
+    - Renamed dependency functions
+    - Added theme file loader
+    - Listed all dependencies in the dependency loader (may change later)

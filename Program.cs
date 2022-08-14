@@ -12,6 +12,7 @@ using NebulaOS.Graphics;
 using NebulaOS.Graphics.Effects;
 using NebulaOS.Maths;
 using NebulaOS.NSystem.Generic;
+using NebulaOS.Programs.SystemPrograms;
 
 namespace NebulaOS {
     public class Root {
@@ -23,20 +24,22 @@ namespace NebulaOS {
             Console.WriteLine("NebulaOS v0.0.9");
 
             Logging.LogInfo("Using drive: " + Config.GetDefaultDrive().Name);
-            Logging.LogInfo("Creating user and system dependencies...");
-            Deps.CreateDeps();
 
-            Logging.LogInfo("Loading system..");
-            Deps.CreateSystem();
-            Logging.LogInfo("System root variables loaded.");
+            Logging.LogInfo("Loading system dependencies..");
+            Deps.CreateSystemDeps();
+            Logging.LogInfo("System variables loaded.");
+
+            Logging.LogInfo("Creating user dependencies...");
+            Deps.CreateUserDeps();
 
             Logging.LogInfo("Done");
             Logging.Log("NebulaOS.Booting", "Booting NebulaOS...", Logging.LogType.System);
 
             Console.Clear();
-            Window win = new Window(Console.WindowWidth - 5, Console.WindowHeight - 5, "NebulaOS", new WindowTheme());
-            win.Init();
-            Console.ReadKey();
+            Logging.LogInfo("Console cleared, initializing boot window...");
+
+            Home home = new Home();
+            home.Run();
             Console.Clear();
             return 0;
         }

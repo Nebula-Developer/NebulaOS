@@ -86,5 +86,9 @@ namespace NebulaOS.NSystem {
         public Drive GetDefaultDrive() {
             return Drives.First(x => x.Name == DefaultDrive && x.Type == Drive.DriveType.Root);
         }
+
+        public String GetDefaultDrivePath() {
+            return Paths.GetRootPath(Path.Combine("Drives", this.GetDefaultDrive().Name));
+        }
     }
 }

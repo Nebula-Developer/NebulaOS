@@ -1,0 +1,3 @@
+/Users/nicocook/Documents/GitHub/NebulaOS/Build/MacOS/NebulaOS.pdb
+/Users/nicocook/Documents/GitHub/NebulaOS/Build/MacOS/libMono.Unix.dylib
+/Users/nicocook/Documents/GitHub/NebulaOS/Build/MacOS/NebulaOS

@@ -84,4 +84,23 @@ namespace NebulaOS.Programs {
         /// </summary>
         public dynamic Data { get; set; } = new JObject();
     }
+
+    public class Program {
+        /// <summary>
+        /// This function is called upon the start of the program.
+        /// </summary>
+        public virtual void Start() { }
+
+        /// <summary>
+        /// Starts the program.
+        /// </summary>
+        public void Run() {
+            this.Start();
+        }
+
+        /// <summary>
+        /// Dynamic program data variable.
+        /// </summary>
+        public dynamic Data { get; set; } = new JObject();
+    }
 }

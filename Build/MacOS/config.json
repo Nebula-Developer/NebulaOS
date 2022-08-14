@@ -1,0 +1,13 @@
+{
+  "Drives": [
+    {
+      "Name": "OS",
+      "Type": 0,
+      "data": {
+        "Data": "TestData"
+      }
+    }
+  ],
+  "DefaultDrive": "OS",
+  "DrivePath": "Undefined"
+}

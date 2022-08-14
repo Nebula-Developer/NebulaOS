@@ -1,0 +1,2 @@
+/Users/nicocook/Documents/GitHub/NebulaOS/Build/Windows/NebulaOS.pdb
+/Users/nicocook/Documents/GitHub/NebulaOS/Build/Windows/NebulaOS.exe

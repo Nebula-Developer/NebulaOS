@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using NebulaOS.Files;
 using NebulaOS.Files.NJSON;
 using NebulaOS.Tests;
+using NebulaOS.Graphics;
 
 namespace NebulaOS.NSystem {
   public class Deps {
@@ -12,7 +13,7 @@ namespace NebulaOS.NSystem {
     /// This function will create all dependencies for the NebulaOS system.
     /// This includes package created dependencies, along with system dependencies.
     /// </summary>
-    public static void CreateDeps() {
+    public static void CreateUserDeps() {
       Logging.LogInfo("Creating test directory structure for stored JSON data...");
       OSFile.CreateNonExistingDir(Paths.GetRootPath("Tests"));
       foreach (Test t in GlobalTests.Tests) {
@@ -25,7 +26,7 @@ namespace NebulaOS.NSystem {
     /// <summary>
     /// Initial system creation call
     /// </summary>
-    public static void CreateSystem() {
+    public static void CreateSystemDeps() {
       OSFile.CreateNonExisting(Paths.GetRootPath("config.json"), JSON.Serialize(new RootConfig(), true));
       dynamic? config = JSON.ParseFile(Paths.GetRootPath("config.json"));
       if (config == null) { OSFile.Write(Paths.GetRootPath("config.json"), JSON.Serialize(new RootConfig(), true)); config = JSON.ParseFile(Paths.GetRootPath("config.json")); }
@@ -57,6 +58,31 @@ namespace NebulaOS.NSystem {
 
       Root.Config = JSON.ParseFile<RootConfig>(Paths.GetRootPath("config.json")) ?? new RootConfig();
       Root.SystemInfo = JSON.ParseFile<Info>(Paths.GetRootPath("sysinfo.json")) ?? new Info();
+
+      List<String> DriveDeps = new List<String>() {
+        "bin",
+        "sys",
+        "sys/themes",
+        "user",
+        "user/Documents",
+        "user/Desktop",
+        "user/Downloads",
+        "data",
+        "program_data"
+      };
+
+      foreach (String dep in DriveDeps) {
+        OSFile.CreateNonExistingDir(Paths.GetDrivePath(dep));
+      }
+
+      List<Tuple<String, String>> DriveFileDeps = new List<Tuple<String, String>>() {
+        new Tuple<String, String>("sys/themes/Default.json", JSON.Serialize(new WindowTheme(), true)),
+        new Tuple<String, String>("bin/etc.dat", "1")
+      };
+
+      foreach (Tuple<String, String> dep in DriveFileDeps) {
+        OSFile.CreateNonExisting(Paths.GetDrivePath(dep.Item1), dep.Item2);
+      }
       return;
     }
   }
